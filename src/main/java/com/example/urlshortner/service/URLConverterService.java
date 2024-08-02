@@ -26,9 +26,9 @@ public class URLConverterService
         String uniqueID = IDConverter.INSTANCE.createUniqueID(id);
         urlRepository.saveUrl("url:"+id,longURL);
 
-        String baseString = formatLocalURLFromShortener(localURL);
-        String shortenedURL = baseString + uniqueID;
-        return shortenedURL;
+//        String baseString = formatLocalURLFromShortener(localURL);
+//        String shortenedURL = baseString + uniqueID;
+        return uniqueID;
     }
 
     private String formatLocalURLFromShortener(String localURL) {

@@ -24,15 +24,15 @@ public class URLController {
         this.urlConverterService = urlConverterService;
     }
 
-    @RequestMapping(value = "/shortener", method=RequestMethod.POST, consumes = {"application/json"})
-    public String shortenUrl(@RequestBody  final ShortenRequest shortenRequest, HttpServletRequest request) throws Exception {
+    @PostMapping("/shortener")
+    public String shortenUrl(@RequestBody ShortenRequest shortenRequest, HttpServletRequest request) throws Exception {
         LOGGER.info("Received url to shorten: " + shortenRequest.getUrl());
         String longUrl = shortenRequest.getUrl();
         if (URLValidator.INSTANCE.validateURL(longUrl)) {
             String localURL = request.getRequestURL().toString();
-            String shortenedUrl = urlConverterService.shortenURL(localURL, shortenRequest.getUrl());
-            LOGGER.info("Shortened url to: " + shortenedUrl);
-            return shortenedUrl;
+            String shortCode = urlConverterService.shortenURL(localURL, shortenRequest.getUrl());
+            LOGGER.info("Shortened url to: " + shortCode);
+            return shortCode;  // Return only the short code
         }
         throw new Exception("Please enter a valid URL");
     }

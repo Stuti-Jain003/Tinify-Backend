@@ -6,10 +6,14 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
+
+[//]: # (- [Usage]&#40;#usage&#41;)
+
+[//]: # (- [API Endpoints]&#40;#api-endpoints&#41;)
+
+[//]: # (- [Contributing]&#40;#contributing&#41;)
+
+[//]: # (- [License]&#40;#license&#41;)
 
 ## Introduction
 
