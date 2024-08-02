@@ -44,5 +44,5 @@ Tinify Backend is the server-side component of the Tinify URL shortener service.
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/tinify-backend.git
+   git clone https://github.com/stuti-jain003/tinify-backend.git
    cd tinify-backend
